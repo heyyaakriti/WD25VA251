@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //if
+        let age=23;
+        if(age>=18)
+        {
+            console.log("Eligible to vote");
+        }
+
+        //if-else
+        let myAge=45;
+        if(myAge<18)
+        {
+            console.log("wait till next year");
+        }
+        else{
+            console.log("Eligible to vote");
+        }
+
+        //switch case
+        let grade="A";
+        switch(grade){
+            case'A':result="Excellent";
+            break;
+            case'B':result="Good";
+            break;
+            case'C':result="Average";
+            break;
+            default:result="Fail";
+        }
+        console.log(result);
+
+        //if else if else
+        let marks=10;
+        if(marks>60){
+            console.log("first div");
+        }
+        else if(marks<60 && marks>=40)
+        {
+            console.log("second div"); 
+        }
+        else if(marks<40 && marks>=20)
+        {
+            console.log("third div"); 
+        }
+        else{
+            console.log("fail");
+        }
+        let score=[12,34,98,40,56];
+        let sum=0;
+        let avg=0;
+        for(let i=0;i<score.length;i++)
+        {
+            sum=sum+score[i];
+        }
+        console.log(sum);
+         avg=sum/score.length;
+        console.log(avg);
+    </script>
+</body>
+</html>

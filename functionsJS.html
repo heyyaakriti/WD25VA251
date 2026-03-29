@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JS</title>
+</head>
+<body>
+    <script>
+        //normal function without parameters
+        function demo()
+        {
+            console.log("hello js");
+        }
+
+        //normal function with parameters
+        function demo1(text)
+        {
+            console.log("hello "+ text);
+        }
+
+        //function with default parameters
+        function add(a,b=10)
+        {
+            console.log("sum of 2 numbers:" +(a+b));
+        }
+
+        //anonymous function
+        let cal=function()
+        {
+            var n1=7;
+            var n2=25;
+            var res=n1*n2;
+            console.log("multiplication " + res);
+        }
+
+        //arrow function with multi-line statement
+        let div=(x,y)=>{
+            var n1=x;
+            var n2=y;
+            var res=x/y;
+            console.log("divison " + res);
+        }
+
+        //arrow function with single line
+        let msg=()=>console.log("Hello people");
+
+        //callback function
+        function sub(callback)
+        {
+            var n1=15;
+            var n2=10;
+            var res=n1-n2;
+            callback(res);
+        }
+        function displayRes(res){
+            console.log(res);
+        }
+        
+        sub(displayRes);
+        demo1("REACT");
+        demo();
+        add(24);
+        cal();
+        div(120,3);
+        msg();
+    </script>
+</body>
+</html>

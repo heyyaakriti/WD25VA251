@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //primitive = single value(immutable)
+        //string number boolean null undefined symbol BigInt
+        let name="Aakriti";
+        console.log(name);
+        console.log(typeof(name));
+        let age=20;
+        let isMarried=false;
+        let address=null;
+        console.log(typeof(address));
+
+        //BigInt
+        let salary=BigInt(2746488283929);
+        console.log(salary);
+
+        //symbol
+        let n1="vishal";
+        let n2="vishal";
+        console.log(n1==n2);
+
+        //non primitive /reference /object = mutable value
+        //object array function
+
+        //object = collection of its keys and value.
+        let student={
+            name:"vikas",
+            age: 26,
+            address:{
+                city:"Prayagraj",
+                locality:"CivilLines",
+            },
+            branch:"ds",
+            course:"btech",
+            getInfo:function(){
+                return "my name is " + student.name + " course is "+ student.course
+            }
+        };
+        console.log(student);
+        console.log(typeof(student));
+        console.log(student.name + " " + student.age);
+        console.log(student.getInfo());
+
+        //find and delete property of objects
+        //accessing object's keys using bracket notation
+    </script>
+</body>
+</html>
