@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Even Checker</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            background: white;
+            width: 450px;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color: #5a189a;
+            margin-bottom: 25px;
+            font-size: 36px;
+        }
+
+        input{
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            border: 2px solid #b8c0ff;
+            border-radius: 10px;
+            outline: none;
+            margin-bottom: 20px;
+        }
+
+        button{
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        #result{
+            margin-top: 25px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .even{
+            color: green;
+        }
+
+        .odd{
+            color: crimson;
+        }
+
+        .error{
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Odd Even Checker</h1>
+
+        <input type="number" id="num" placeholder="Enter a number">
+
+        <button onclick="check()">Check</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function check() {
+
+            let n = document.getElementById("num").value;
+            let result = document.getElementById("result");
+
+            if(n === ""){
+                result.innerHTML = "Please enter a number";
+                result.className = "error";
+                return;
+            }
+
+            if(n % 2 == 0){
+                result.innerHTML =  n + " is an EVEN number";
+                result.className = "even";
+            }
+            else{
+                result.innerHTML = n + " is an ODD number";
+                result.className = "odd";
+            }
+        }
+    </script>
+
+</body>
+</html>
